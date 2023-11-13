@@ -29,9 +29,9 @@ Utilizaremos o conjunto de dados Breast Cancer Wisconsin (Original), disponível
    - Avaliar o desempenho do modelo no conjunto de teste, extrair valores de perda.
 
 ### 8. Avaliação e Comparação das Arquiteturas
-   - a. Comparar valores de acuracidade.
-   - b. Avaliar assertividade (curva ROC, matriz confusão).
-   - c. Analisar gráficos de perda (treinamento e teste) para identificar underfitting ou overfitting.
+   - a) Comparar valores de acuracidade.
+   - b) Avaliar assertividade (curva ROC, matriz confusão).
+   - c) Analisar gráficos de perda (treinamento e teste) para identificar underfitting ou overfitting.
 
 ### Ajustes na Arquitetura
    - Ajustar a quantidade de camadas ocultas, número de neurônios e funções de ativação para maximizar acurácia e assertividade (usar taxa de aprendizado de 0.01).
