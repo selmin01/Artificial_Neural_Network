@@ -1,3 +1,6 @@
+# Rede Neural Artificial
+Modelos computacionais inspirados pelo sistema nervoso central de um animal, capazes de realizar o aprendizado de máquina bem como o reconhecimento de padrões.
+
 # Projeto de Implementação e Treinamento de MLP para Classificação de Dados
 
 Neste trabalho, exploraremos a implementação e treinamento de uma Rede Neural do tipo Multilayer Perceptron (MLP) para a classificação de dados. Recomenda-se o uso das bibliotecas TensorFlow e scikit-learn.
