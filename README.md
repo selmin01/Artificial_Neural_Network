@@ -1,43 +1,44 @@
-# Artificial_Neural_Network
+# Projeto de Implementação e Treinamento de MLP para Classificação de Dados
 
+Neste trabalho, exploraremos a implementação e treinamento de uma Rede Neural do tipo Multilayer Perceptron (MLP) para a classificação de dados. Recomenda-se o uso das bibliotecas TensorFlow e scikit-learn.
 
-Projeto de Implementação e Treinamento de MLP para Classificação de Dados
+## Conjunto de Dados
+Utilizaremos o conjunto de dados Breast Cancer Wisconsin (Original), disponível em [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/15/breast+cancer+wisconsin+original). É importante notar que a base possui dados faltantes, sendo necessária a limpeza desses dados.
 
-Este projeto tem como objetivo explorar a implementação e treinamento de uma Rede Neural do tipo Multilayer Perceptron (MLP) para a classificação de dados. Utilizaremos as bibliotecas TensorFlow e scikit-learn para desenvolver e avaliar nosso modelo.
-Conjunto de Dados
+## Passos do Trabalho
 
-O conjunto de dados escolhido para este trabalho é o Breast Cancer Wisconsin (Original), disponível em UCI Machine Learning Repository. É importante destacar que o conjunto de dados possui valores ausentes, sendo necessária a realização da limpeza desses dados.
-Passos para Realização do Trabalho
-1. Carregar o Dataset
+### 1. Carregar o Dataset
+   - Realizar o download do conjunto de dados e importá-lo para o ambiente de trabalho.
 
-Inicialmente, carregaremos o conjunto de dados e realizaremos a limpeza dos dados faltantes.
-2. Normalização dos Dados
+### 2. Normalização dos Dados
+   - Aplicar a normalização dos dados para colocar todas as características em uma escala comum.
 
-Após a carga dos dados, aplicaremos a normalização para garantir que todas as características estejam na mesma escala. Utilizaremos o StandardScaler do scikit-learn para essa tarefa.
-3. Dividir os Dados em Conjuntos de Treinamento e Teste (Método Holdout)
+### 3. Dividir os Dados
+   - Utilizar o método holdout para dividir os dados em conjuntos de treinamento e teste.
 
-Usaremos o método holdout para dividir os dados em conjuntos de treinamento e teste. Esta divisão é crucial para avaliar o desempenho do modelo em dados não vistos.
-4. Definir a Arquitetura da Rede Neural com TensorFlow
+### 4. Definir a Arquitetura da Rede Neural
+   - Utilizar TensorFlow para definir a arquitetura da MLP.
 
-A arquitetura da MLP será definida utilizando a biblioteca TensorFlow. Ajustaremos o número de camadas ocultas, o número de neurônios em cada camada e as funções de ativação para otimizar a acurácia do modelo.
-5. Definir o Otimizador (Algoritmo de Treino) - Adam
+### 5. Definir um Otimizador (Adam)
+   - Escolher o algoritmo de otimização Adam para calcular os pesos durante o treinamento.
 
-Utilizaremos o algoritmo de otimização Adam para calcular os pesos da rede neural. O Adam trabalha em conjunto com o backpropagation, que é crucial no treinamento de redes neurais.
-6. Treinar o Modelo
+### 6. Treinar o Modelo
+   - Treinar a MLP usando os conjuntos de treinamento, extrair valores de perda durante o treinamento.
 
-Treinaremos o modelo usando o conjunto de treinamento e monitoraremos os valores de perda ao longo do processo de treinamento.
-7. Avaliar o Modelo no Conjunto de Teste
+### 7. Avaliar o Modelo
+   - Avaliar o desempenho do modelo no conjunto de teste, extrair valores de perda.
 
-Avaliaremos o desempenho do modelo no conjunto de teste, extraindo valores de perda para análise.
-8. Avaliação e Comparação das Arquiteturas
+### 8. Avaliação e Comparação das Arquiteturas
+   a. Comparar valores de acuracidade.
+   b. Avaliar assertividade (curva ROC, matriz confusão).
+   c. Analisar gráficos de perda (treinamento e teste) para identificar underfitting ou overfitting.
 
-Realizaremos uma avaliação comparativa das arquiteturas de MLP testadas, considerando:
-a. Valores de acurácia
-b. Assertividade (curva ROC, matriz confusão)
-c. Gráficos de perda (treinamento e teste) para detectar underfitting ou overfitting.
-Adicional: Variação da Taxa de Aprendizado
+### Ajustes na Arquitetura
+   - Ajustar a quantidade de camadas ocultas, número de neurônios e funções de ativação para maximizar acurácia e assertividade (usar taxa de aprendizado de 0.01).
 
-Para a melhor configuração encontrada, variaremos a taxa de aprendizado e repetiremos a avaliação do modelo.
-Relatório Técnico
+### Variação da Taxa de Aprendizado
+   - Para a melhor configuração, variar a taxa de aprendizado e refazer a avaliação do modelo.
 
-Ao final dos testes, será elaborado um relatório técnico que explicará as decisões tomadas, apresentando os valores e arquiteturas utilizados, juntamente com gráficos comparativos entre os modelos. O relatório incluirá insights sobre a influência da taxa de aprendizado nas métricas de avaliação.
+## Relatório Técnico
+Ao final dos testes, elaborar um relatório técnico explicando as decisões tomadas, apresentando os valores e arquiteturas utilizados, e incluindo gráficos para comparar os modelos. Incluir análise de underfitting ou overfitting, além de sugestões para melhorias.
+
