@@ -6,7 +6,8 @@ from sklearn import preprocessing
 from rna import ArtificialNeuralNetwork
 
 filtered = []
-with open("data/breast-cancer-wisconsin.csv", "r") as csvfile:
+# with open("data/breast-cancer-wisconsin.csv", "r") as csvfile:
+with open("/Users/anselmoramos/Documents/Files/ia/trab_3/ml/breast-cancer-wisconsin.csv", "r") as csvfile:
     # Seu código aqui
     csvr = csv.reader(
         filter(lambda l: l[6] != "?", csvfile),
@@ -41,14 +42,16 @@ neural_net = ArtificialNeuralNetwork(input_dim=9)
 neural_net.train(X_train, Y_train, epochs=50, batch_size=32, validation_data=(X_test, Y_test))
 
 # Avaliar o modelo
-accuracy, conf_matrix, roc_auc = neural_net.evaluate(X_test, Y_test)
+accuracy, conf_matrix, roc_auc, y_pred_classes = neural_net.evaluate(X_test, Y_test)
 print(f"Accuracy: {accuracy}")
 print(f'Acurácia no conjunto de teste: {accuracy * 100:.2f}%')
 print("Confusion Matrix:")
 print(conf_matrix)
 print(f"ROC AUC: {roc_auc}")
-print(f'Área sob a Curva ROC: {roc_auc:.2f}')
 
 # Plotar gráficos
 neural_net.plot_loss()
 neural_net.plot_roc_curve(X_test, Y_test)
+neural_net.plot_confusion_matrix(Y_test, y_pred_classes)
+neural_net.plot_test_metrics()
+
